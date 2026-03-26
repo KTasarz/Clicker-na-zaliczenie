@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wafa3marclht"]
 
 [ext_resource type="Texture2D" uid="uid://mjr5dcn8temv" path="res://Images/Background.png" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://cp8a6cy0th88x" path="res://OmegaButton.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://cp8a6cy0th88x" path="res://omegaButton.gd" id="2_0xm2m"]
 
 [node name="Node2D" type="Node2D" unique_id=1053027519]
 
@@ -28,4 +28,4 @@ offset_right = 671.0
 offset_bottom = 275.0
 text = "POINTS: 0"
 
-[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

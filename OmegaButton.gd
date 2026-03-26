@@ -1,6 +1,6 @@
 extends Button
 
-@onready var points = $"../Points"
+@onready var banner = $"../Points"
 var times_pressed = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	times_pressed = times_pressed + 1
-	points.text = "POINTS: " + str(times_pressed)
+	times_pressed = times_pressed + Points.click
+	banner.text = "POINTS: " + str(times_pressed)
