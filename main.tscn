@@ -1,31 +1,41 @@
 [gd_scene format=3 uid="uid://wafa3marclht"]
 
 [ext_resource type="Texture2D" uid="uid://mjr5dcn8temv" path="res://Images/Background.png" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://cp8a6cy0th88x" path="res://omegaButton.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://cp8a6cy0th88x" path="res://OmegaButton.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bbryd10rgt71h" path="res://UpgradeButton.gd" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=1053027519]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1630122987]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1891009167]
-position = Vector2(577.5, 321.75)
-scale = Vector2(2.0228872, 1.1618445)
+position = Vector2(361.5, 640.25)
+scale = Vector2(1.2623239, 2.313743)
 texture = ExtResource("1_ig7tw")
 
 [node name="Button" type="Button" parent="." unique_id=850827719]
-offset_left = 386.0
-offset_top = 418.0
-offset_right = 725.0
-offset_bottom = 551.0
+offset_left = 36.0
+offset_top = 203.0
+offset_right = 375.0
+offset_bottom = 336.0
 action_mode = 0
 text = "CLICK"
 script = ExtResource("2_0xm2m")
 
 [node name="Points" type="RichTextLabel" parent="." unique_id=121725895]
-offset_left = 509.0
-offset_top = 208.0
-offset_right = 671.0
-offset_bottom = 275.0
+offset_left = 253.0
+offset_top = 100.0
+offset_right = 415.0
+offset_bottom = 167.0
 text = "POINTS: 0"
 
+[node name="Button2" type="Button" parent="." unique_id=1909598559]
+offset_left = 483.0
+offset_top = 229.0
+offset_right = 647.0
+offset_bottom = 316.0
+text = "upgrade"
+script = ExtResource("3_h2yge")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

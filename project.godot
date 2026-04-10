@@ -18,6 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Points="*uid://3ecxnr1jhy0u"
+UpgradeClass="*uid://b01rqhebxrqas"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
 
 [physics]
 
