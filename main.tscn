@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cp8a6cy0th88x" path="res://omegaButton.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://bbryd10rgt71h" path="res://UpgradeButton.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://bod3iq1t40xuk" path="res://UpgradeButtonPassive.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://bdl7xjka2xurr" path="res://timer.gd" id="5_lquwl"]
 
 [node name="Node2D" type="Node2D" unique_id=1053027519]
 
@@ -46,6 +47,11 @@ offset_bottom = 541.0
 text = "upgrade passive"
 script = ExtResource("4_1bvp3")
 
+[node name="Timer" type="Timer" parent="." unique_id=765474566]
+autostart = true
+script = ExtResource("5_lquwl")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
