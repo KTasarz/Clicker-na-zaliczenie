@@ -1,5 +1,6 @@
 extends Button
 
+@onready var banner = $"../PointsLabel"
 var upgrade = UpgradeClass.new(10)
 
 # Called when the node enters the scene tree for the first time.
@@ -13,4 +14,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	upgrade.upgrade_click()
+	if Points.amount >= upgrade.cost:
+		Points.amount = Points.amount - upgrade.cost
+		banner.text = "POINTS: " + str(Points.amount)
+		upgrade.upgrade_click()
