@@ -1,12 +1,11 @@
 extends Button
 
 @onready var banner = $"../RTLabelPoints"
-var upgrade = UpgradeClass.new(20)
 
 func _on_pressed() -> void:
-	print("Sprawdzanie czy "+str(Points.amount)+" >= "+ str(upgrade.cost))
-	if Points.amount >= upgrade.cost:
+	print("Sprawdzanie czy "+str(Points.amount)+" >= "+ str(UpgradeManager.passive1.cost))
+	if Points.amount >= UpgradeManager.passive1cost:
 		print("Sprawdzenie udane")
-		Points.amount = Points.amount - upgrade.cost
+		Points.amount = Points.amount - UpgradeManager.passive1cost
 		banner.text = "POINTS: " + str(Points.amount)
-		upgrade.upgrade_passive(1)
+		UpgradeManager.passive1.upgrade_passive(1)
