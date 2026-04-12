@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cgvijffm083y7" path="res://Images/ShopBackground.png" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://dl58xnljvwsh8" path="res://ShopExit.gd" id="2_ouk20"]
+[ext_resource type="Script" uid="uid://lpembhkvh830" path="res://menuLabelLoad.gd" id="2_ytr4m"]
+[ext_resource type="Script" uid="uid://bbryd10rgt71h" path="res://UpgradeButton.gd" id="3_4hy44"]
+[ext_resource type="Script" uid="uid://bod3iq1t40xuk" path="res://UpgradeButtonPassive.gd" id="4_ytr4m"]
 
 [node name="Control" type="Control" unique_id=593733146]
 layout_mode = 3
@@ -35,6 +38,7 @@ layout_mode = 2
 text = "Points: 0"
 fit_content = true
 horizontal_alignment = 1
+script = ExtResource("2_ytr4m")
 
 [node name="ButtonBack" type="Button" parent="VBoxContainer" unique_id=691700822]
 layout_mode = 2
@@ -44,9 +48,11 @@ script = ExtResource("2_ouk20")
 [node name="ButtonTestUpgradeClick" type="Button" parent="VBoxContainer" unique_id=1471580772]
 layout_mode = 2
 text = "Upgrade - Click"
+script = ExtResource("3_4hy44")
 
 [node name="ButtonTestUpgradePassive" type="Button" parent="VBoxContainer" unique_id=1958917255]
 layout_mode = 2
 text = "Upgrade - Passive"
+script = ExtResource("4_ytr4m")
 
 [connection signal="pressed" from="VBoxContainer/ButtonBack" to="VBoxContainer/ButtonBack" method="_on_pressed"]

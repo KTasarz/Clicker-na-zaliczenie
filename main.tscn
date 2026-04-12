@@ -2,8 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://mjr5dcn8temv" path="res://Images/Background.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cp8a6cy0th88x" path="res://omegaButton.gd" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://bbryd10rgt71h" path="res://UpgradeButton.gd" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://bod3iq1t40xuk" path="res://UpgradeButtonPassive.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://cmifil5mig2oy" path="res://mainLabelLoad.gd" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://bdl7xjka2xurr" path="res://timer.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://ccrx4n17g0dy3" path="res://ShopEnter.gd" id="6_7mycd"]
 
@@ -31,22 +30,7 @@ offset_top = 73.0
 offset_right = 261.0
 offset_bottom = 140.0
 text = "POINTS: 0"
-
-[node name="Button2" type="Button" parent="." unique_id=1909598559]
-offset_left = 101.0
-offset_top = 339.0
-offset_right = 265.0
-offset_bottom = 426.0
-text = "upgrade click"
-script = ExtResource("3_h2yge")
-
-[node name="Button3" type="Button" parent="." unique_id=952675157]
-offset_left = 107.0
-offset_top = 445.0
-offset_right = 247.0
-offset_bottom = 541.0
-text = "upgrade passive"
-script = ExtResource("4_1bvp3")
+script = ExtResource("3_lquwl")
 
 [node name="Timer" type="Timer" parent="." unique_id=765474566]
 autostart = true
@@ -62,7 +46,5 @@ text = "Shop
 script = ExtResource("6_7mycd")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
 [connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
