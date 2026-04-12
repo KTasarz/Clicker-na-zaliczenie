@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bdsu2xsgei8yn"]
+
+[ext_resource type="Texture2D" uid="uid://cgvijffm083y7" path="res://Images/ShopBackground.png" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://dl58xnljvwsh8" path="res://ShopExit.gd" id="2_ouk20"]
+
+[node name="Control" type="Control" unique_id=593733146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2068384893]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lti8b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1312239299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RTLabelPoints" type="RichTextLabel" parent="VBoxContainer" unique_id=1752637139]
+layout_mode = 2
+text = "Points: 0"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="ButtonBack" type="Button" parent="VBoxContainer" unique_id=691700822]
+layout_mode = 2
+text = "Back"
+script = ExtResource("2_ouk20")
+
+[node name="ButtonTestUpgradeClick" type="Button" parent="VBoxContainer" unique_id=1471580772]
+layout_mode = 2
+text = "Upgrade - Click"
+
+[node name="ButtonTestUpgradePassive" type="Button" parent="VBoxContainer" unique_id=1958917255]
+layout_mode = 2
+text = "Upgrade - Passive"
+
+[connection signal="pressed" from="VBoxContainer/ButtonBack" to="VBoxContainer/ButtonBack" method="_on_pressed"]

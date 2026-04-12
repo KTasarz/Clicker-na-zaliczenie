@@ -23,6 +23,7 @@ Points="*uid://3ecxnr1jhy0u"
 
 window/size/viewport_width=360
 window/size/viewport_height=640
+window/stretch/mode="canvas_items"
 
 [physics]
 
