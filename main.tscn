@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://mjr5dcn8temv" path="res://Images/Background.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cp8a6cy0th88x" path="res://omegaButton.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://cmifil5mig2oy" path="res://mainLabelLoad.gd" id="3_lquwl"]
-[ext_resource type="Script" uid="uid://bdl7xjka2xurr" path="res://timer.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bdl7xjka2xurr" path="res://timerMain.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://ccrx4n17g0dy3" path="res://ShopEnter.gd" id="6_7mycd"]
 
 [node name="Node2D" type="Node2D" unique_id=1053027519]

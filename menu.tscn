@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://lpembhkvh830" path="res://menuLabelLoad.gd" id="2_ytr4m"]
 [ext_resource type="Script" uid="uid://bbryd10rgt71h" path="res://UpgradeButton.gd" id="3_4hy44"]
 [ext_resource type="Script" uid="uid://bod3iq1t40xuk" path="res://UpgradeButtonPassive.gd" id="4_ytr4m"]
+[ext_resource type="Script" uid="uid://kjoyk2jrxunp" path="res://timerMenu.gd" id="6_l48gv"]
 
 [node name="Control" type="Control" unique_id=593733146]
 layout_mode = 3
@@ -55,4 +56,11 @@ layout_mode = 2
 text = "Upgrade - Passive"
 script = ExtResource("4_ytr4m")
 
+[node name="Timer" type="Timer" parent="." unique_id=1015927625]
+autostart = true
+script = ExtResource("6_l48gv")
+
 [connection signal="pressed" from="VBoxContainer/ButtonBack" to="VBoxContainer/ButtonBack" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonTestUpgradeClick" to="VBoxContainer/ButtonTestUpgradeClick" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonTestUpgradePassive" to="VBoxContainer/ButtonTestUpgradePassive" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

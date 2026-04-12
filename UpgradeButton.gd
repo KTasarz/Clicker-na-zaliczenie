@@ -1,20 +1,12 @@
 extends Button
 
-@onready var banner = $"../PointsLabel"
+@onready var banner = $"../RTLabelPoints"
 var upgrade = UpgradeClass.new(10)
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_pressed() -> void:
+	print("Sprawdzanie czy "+str(Points.amount)+" >= "+ str(upgrade.cost))
 	if Points.amount >= upgrade.cost:
+		print("Sprawdzenie udane")
 		Points.amount = Points.amount - upgrade.cost
 		banner.text = "POINTS: " + str(Points.amount)
 		upgrade.upgrade_click(1)
