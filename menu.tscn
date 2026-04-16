@@ -3,9 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://cgvijffm083y7" path="res://Images/ShopBackground.png" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://dl58xnljvwsh8" path="res://ShopExit.gd" id="2_ouk20"]
 [ext_resource type="Script" uid="uid://lpembhkvh830" path="res://menuLabelLoad.gd" id="2_ytr4m"]
-[ext_resource type="Script" uid="uid://bbryd10rgt71h" path="res://UpgradeButton.gd" id="3_4hy44"]
-[ext_resource type="Script" uid="uid://bod3iq1t40xuk" path="res://UpgradeButtonPassive.gd" id="4_ytr4m"]
+[ext_resource type="Script" uid="uid://cq0os3wdcffk3" path="res://button_click_upg_1.gd" id="4_ecwwl"]
+[ext_resource type="Script" uid="uid://cn7ntya54y673" path="res://button_passive_upg_1.gd" id="5_kk3ma"]
 [ext_resource type="Script" uid="uid://kjoyk2jrxunp" path="res://timerMenu.gd" id="6_l48gv"]
+[ext_resource type="Script" uid="uid://b5fdhc2wvutca" path="res://button_click_upg_2.gd" id="6_nrnbx"]
+[ext_resource type="Script" uid="uid://bg2krkgev5rhc" path="res://button_passive_upg_2.gd" id="7_iqepy"]
+[ext_resource type="Script" uid="uid://ba71jmquaf7tf" path="res://button_click_upg_3.gd" id="8_h1wq0"]
+[ext_resource type="Script" uid="uid://c6oq0khbt3orb" path="res://button_passvie_upg_3.gd" id="9_dwrpx"]
 
 [node name="Control" type="Control" unique_id=593733146]
 layout_mode = 3
@@ -46,21 +50,45 @@ layout_mode = 2
 text = "Back"
 script = ExtResource("2_ouk20")
 
-[node name="ButtonTestUpgradeClick" type="Button" parent="VBoxContainer" unique_id=1471580772]
+[node name="ButtonClickUpg1" type="Button" parent="VBoxContainer" unique_id=933805844]
 layout_mode = 2
-text = "Upgrade - Click"
-script = ExtResource("3_4hy44")
+text = "Use 1 finger more (Click power +1)"
+script = ExtResource("4_ecwwl")
 
-[node name="ButtonTestUpgradePassive" type="Button" parent="VBoxContainer" unique_id=1958917255]
+[node name="ButtonPassiveUpg1" type="Button" parent="VBoxContainer" unique_id=561136878]
 layout_mode = 2
-text = "Upgrade - Passive"
-script = ExtResource("4_ytr4m")
+text = "Plant Daisy (Passive income +1)"
+script = ExtResource("5_kk3ma")
+
+[node name="ButtonClickUpg2" type="Button" parent="VBoxContainer" unique_id=271493451]
+layout_mode = 2
+text = "Grow hand (Click power +5)"
+script = ExtResource("6_nrnbx")
+
+[node name="ButtonPassiveUpg2" type="Button" parent="VBoxContainer" unique_id=162590600]
+layout_mode = 2
+text = "Recruit Bee (Passive income +10)"
+script = ExtResource("7_iqepy")
+
+[node name="ButtonClickUpg3" type="Button" parent="VBoxContainer" unique_id=965448541]
+layout_mode = 2
+text = "Buy Lawnmower (Click power +20)"
+script = ExtResource("8_h1wq0")
+
+[node name="ButtonPassvieUpg3" type="Button" parent="VBoxContainer" unique_id=2037423974]
+layout_mode = 2
+text = "Buy Cow (Passive income +20)"
+script = ExtResource("9_dwrpx")
 
 [node name="Timer" type="Timer" parent="." unique_id=1015927625]
 autostart = true
 script = ExtResource("6_l48gv")
 
 [connection signal="pressed" from="VBoxContainer/ButtonBack" to="VBoxContainer/ButtonBack" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/ButtonTestUpgradeClick" to="VBoxContainer/ButtonTestUpgradeClick" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/ButtonTestUpgradePassive" to="VBoxContainer/ButtonTestUpgradePassive" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonClickUpg1" to="VBoxContainer/ButtonClickUpg1" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonPassiveUpg1" to="VBoxContainer/ButtonPassiveUpg1" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonClickUpg2" to="VBoxContainer/ButtonClickUpg2" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonPassiveUpg2" to="VBoxContainer/ButtonPassiveUpg2" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonClickUpg3" to="VBoxContainer/ButtonClickUpg3" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonPassvieUpg3" to="VBoxContainer/ButtonPassvieUpg3" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
